@@ -1,0 +1,19 @@
+.container {
+    width: 512px;
+    height: 512px;
+    background-color: red;
+    border: 2px solid;
+    border-color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 10px 0;
+}
+
+button {
+    /* todo */
+}

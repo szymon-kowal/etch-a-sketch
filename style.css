@@ -1,3 +1,29 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.body-coint {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    align-self: center;
+}
+.middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
 .container {
     width: 512px;
     height: 512px;
@@ -8,6 +34,7 @@
 
 ul {
     list-style-type: none;
+    margin-right: 200px;
 }
 
 li {
@@ -15,5 +42,11 @@ li {
 }
 
 button {
+    width: 5em;
     /* todo */
+}
+
+
+.footer {
+    align-self: center;
 }

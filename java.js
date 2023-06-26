@@ -3,14 +3,17 @@ const container = document.getElementsByClassName('container')[0];
 const rainbow_butt = document.getElementsByClassName('RGB')[0];
 const clear = document.getElementsByClassName('clear')[0];
 const inputField = document.getElementsByClassName('inputField')[0];
-console.log(inputField)
 const submitButton = document.getElementsByClassName('submitButton')[0];
+let childElements;
 
-// Input box
+// Input box / check if inputs is ok. // Finds all child elements
 let inputValue = 16;
+addSquare(inputValue);
+
 submitButton.addEventListener('click', () => {
     inputValue = parseInt(inputField.value);
-    console.log(inputValue);
+    removeChildNode(container);
+    addSquare(inputValue);
     if (!(Number.isInteger(inputValue) && inputValue > 0 && inputValue <= 100)) {
         alert("You've inputted inappropiate value.");
     };
@@ -18,8 +21,7 @@ submitButton.addEventListener('click', () => {
 // Add clear button
 
 clear.addEventListener('click', () => {
-    const squares = container.getElementsByClassName('newDiv');;
-
+    const squares = container.getElementsByClassName('newDiv');
     for (let i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = 'white';
     }
@@ -41,19 +43,23 @@ document.addEventListener('mouseup',function(event) {
         console.log('mosue up')
     }
 })
+// Renove squares from parent node
+function removeChildNode(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 
-// Add functionality to button click -> 
-// It s need to be rewritten to user input or smthing.
-submitButton.addEventListener('click',addSquare(inputValue))
-
+// Add squares to the container
 function addSquare(input) {
     const sizeBox = 512/input; 
+
     for (let i = 0; i < input*input; i++) {
         const square = document.createElement('div');
         // Add style formating
         square.classList.add('newDiv');
-        // Add automatic resizing of boxes.
+        // Add automatic resizing of boxes 
         square.style.height = `${sizeBox}px`;
         square.style.width = `${sizeBox}px`;
         square.style.backgroundColor = "white";

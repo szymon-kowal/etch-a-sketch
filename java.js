@@ -1,8 +1,23 @@
 const button16 = document.getElementsByClassName('16')[0];
-const container = document.getElementsByClassName('container')[0]
-let isMousePressed = false;
+const container = document.getElementsByClassName('container')[0];
+const rainbow_butt = document.getElementsByClassName('RGB')[0];
+const clear = document.getElementsByClassName('clear')[0];
+
+
+
+// Add clear button
+
+clear.addEventListener('click', () => {
+    const squares = container.getElementsByClassName('newDiv');;
+
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = 'white';
+    }
+});
 
 // Checking if mouse is pressed.
+let isMousePressed = false;
+
 document.addEventListener('mousedown',function(event) {
     if (event.button === 0) {
         isMousePressed = true;

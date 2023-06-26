@@ -288,7 +288,7 @@ body, html {
 .container {
     width: 512px;
     height: 512px;
-    background-color: red;
+    background-color: white;
     border: 1px solid;
     border-color: black;
     display: flex;

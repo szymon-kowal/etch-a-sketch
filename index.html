@@ -6,31 +6,41 @@
     <title>Etch-a-sketch</title>
     <script src="java.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="body-coint">
-        <div class = "header">text</div>
+        <div class = "header-one">
+            <div class = "header">
+                <span>Hi ! I made an etch-a-scetch page where you can draw in black and rgb color, and freely change the number of cells on the board in the range of 1 - 100 !</span>
+            </div>
+        </div>
         <div class = "middle">
             <div class = "left">
-                <ul>
-                    <li>
-                        <input type ="text" class="inputField">
-                        <button class="submitButton">Submit</button>
-                    </li>
-                    <li>
-                        <button class = "RGB">Rainbow</button>
-                    </li>
-                    <li>
-                        <button class = "clear">clear</button>
-                    </li>
-                </ul>
+                <div class ="left-coint">
+                    <ul>
+                        <li>
+                            <input type ="text" class="inputField" maxlength="2">
+                            <button class="submitButton">Submit</button>
+                        </li>
+                        <li>
+                            <button class="button-85" role="button">Rainbow</button>
+                        </li>
+                        <li>
+                            <button class="button-black" role="button">Black</button>
+                        </li>
+                        <li>
+                            <button class="clear" role="button">Clear</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class = "right">
                 <div class = "container"></div>
 
             </div>
         </div>
-        <div class = "footer">footer</div>
+        <div class = "footer">Copyright © 2023 szymon-kowal <a href="https://github.com/szymon-kowal"><i class="fa fa-github" style="font-size:20px; color:black;"></i></a></div>
     </div>
 </body>
 </html>

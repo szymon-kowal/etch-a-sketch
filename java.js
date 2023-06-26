@@ -12,11 +12,12 @@ addSquare(inputValue);
 
 submitButton.addEventListener('click', () => {
     inputValue = parseInt(inputField.value);
+    if (!(Number.isInteger(inputValue) && inputValue > 0 && inputValue <= 100)) {
+        alert("You've inputted inappropiate value. Please input int value between 1 and 100.");
+        return;
+    };
     removeChildNode(container);
     addSquare(inputValue);
-    if (!(Number.isInteger(inputValue) && inputValue > 0 && inputValue <= 100)) {
-        alert("You've inputted inappropiate value.");
-    };
 })
 // Add clear button
 

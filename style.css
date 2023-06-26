@@ -17,6 +17,10 @@ body, html {
 .header {
     align-self: center;
 }
+
+.inputField {
+    width:1.1em;
+}
 .middle {
     display: flex;
     flex-wrap: wrap;

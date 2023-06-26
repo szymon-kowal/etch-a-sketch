@@ -4,8 +4,9 @@ const clear = document.getElementsByClassName('clear')[0];
 const inputField = document.getElementsByClassName('inputField')[0];
 const submitButton = document.getElementsByClassName('submitButton')[0];
 const black_button = document.getElementsByClassName('button-black')[0];
+// Create var to store child Elements
 let childElements;
-let colorValue = 0;
+// Create vars to change color of buttons
 const style = document.createElement('style');
 style.innerHTML = '.button-85:after { background: #E8A2DC; }';
 
@@ -20,21 +21,25 @@ addSquare(inputValue);
 
 // Switch background colour if black and rgb buttons are clicked 
 // and switch the colors during painting on container.
+let colorValue = 0;
+
 rainbow_button.addEventListener('click', () => {
+    colorValue = 1;
     // Append the style rule to the document's head
     document.head.appendChild(style);
     document.head.removeChild(style2);
-    colorValue = 1;
+
 });
 
 
 
 black_button.addEventListener('click', () => {
+    colorValue = 0;
     // Append the style rule to the document's head
     document.head.appendChild(style2);
     document.head.removeChild(style);
-});
 
+});
 
 
 submitButton.addEventListener('click', () => {
@@ -77,7 +82,9 @@ function removeChildNode(parent) {
     }
 }
 
-
+function getRandomInt() {
+    return (Math.floor(Math.random() * 255) + 1);
+}
 // Add squares to the container
 function addSquare(input) {
     const sizeBox = 512/input; 
@@ -93,7 +100,11 @@ function addSquare(input) {
         // Add eventListener to every div
         square.addEventListener('mouseenter', () => {
             if (isMousePressed == true) {
-                square.style.backgroundColor = 'black';
+                if (colorValue == 0) {
+                    square.style.backgroundColor = 'black';
+                } else if (colorValue == 1 ) {
+                    square.style.backgroundColor = `rgb(${getRandomInt()},${getRandomInt()},${getRandomInt()})`;
+                }
             }
         });
         // Append it to container

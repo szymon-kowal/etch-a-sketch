@@ -30,6 +30,8 @@ body, html {
     background-color: red;
     border: 2px solid;
     border-color: black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 ul {
@@ -49,4 +51,10 @@ button {
 
 .footer {
     align-self: center;
+}
+
+.white {
+    background-color: white;
+    width: 16px;
+    height: 16px;
 }

@@ -38,7 +38,6 @@ black_button.addEventListener('click', () => {
     // Append the style rule to the document's head
     document.head.appendChild(style2);
     document.head.removeChild(style);
-
 });
 
 
@@ -87,7 +86,8 @@ function getRandomInt() {
 }
 // Add squares to the container
 function addSquare(input) {
-    const sizeBox = 512/input; 
+    const windowWidth = window.innerWidth;
+    const sizeBox = windowWidth > 520 ? 512/input : 386 / input; 
 
     for (let i = 0; i < input*input; i++) {
         const square = document.createElement('div');

@@ -304,14 +304,28 @@ html {
 
 @media (max-width: 520px) {
 	.container {
-		width: 386px;
-		height: 386px;
+		width: 300px;
+		height: 300px;
 		background-color: white;
 		border: 1px solid;
 		border-color: black;
 		display: flex;
 		flex-wrap: wrap;
 		box-shadow: 0 0 10px 1px black;
+	}
+	.left {
+		margin-right: 0;
+	}
+	.middle {
+		gap: 20px;
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 850px) {
+	.middle {
+		gap: 20px;
+		margin: 20px 0;
 	}
 }
 
